@@ -22,6 +22,7 @@ class EnviaEmail
         $this->quantidadeEmail += 1;
     }
 
+    # essa classe poderia ficar em uma classe separada como um Observer, que é chamado na função lancar e quando chega ao número dejesado faz a limpeza da base de dados
     public function verificaQuantidadeDeEmail(array $listaEmail): void
     {
         if (count($listaEmail) >= 5) {
